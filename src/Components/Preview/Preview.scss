@@ -1,0 +1,114 @@
+@import '../../styles/variables';
+
+.testBar{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.testNav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    color: $main-color;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+    font-size: .4em;
+    letter-spacing: 1px;
+
+}
+
+.nav-options a{
+    text-decoration: none;
+    color: $main-color;
+}
+
+.nav-options a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    width:100%;
+
+.btn{
+
+}
+
+.shop-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    background-image: url(../../images/snowboard.jpg);
+    background-size: cover;
+    width:50%;
+    height:100vh;
+
+    .btn{
+        color: $main-color;
+        text-transform: uppercase;
+        
+    }
+}
+
+.sell-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    background-image: url(../../images/tennis.jpg);
+    background-size: cover;
+    width:50%;
+    height:100vh;
+
+    .btn{
+        background-color: $main-color;
+        border: none;
+        text-transform: uppercase;
+    }
+}
+}
+
+@media (max-width: 768px) and 
+       (-webkit-min-device-pixel-ratio: 2), 
+       (max-width: 768px) and 
+       (max-resolution: 192dpi) { 
+
+        .home-container{
+            height:100vh;
+            width:100vw;
+            flex-direction: column;
+
+            .shop-side{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: red;
+                background-image: url(../../images/snowboard.jpg);
+                background-size: 130% 160%;
+                background-repeat: no-repeat;
+                width:100vw;
+                height:100vh;
+            }
+            
+            .sell-side{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: orange;
+                background-image: url(../../images/tennis.jpg);
+                background-size: cover;
+                width:100vw;
+                height:100vh;
+            
+        }
+}
+       }
