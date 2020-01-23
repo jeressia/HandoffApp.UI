@@ -1,0 +1,11 @@
+{
+    "firebaseConfig" : {
+        "apiKey": "AIzaSyCipox9mBVNWepSGkFaNM95dg4eZHM7AP0",
+        "authDomain": "handoff-372e0.firebaseapp.com",
+        "databaseURL": "https://handoff-372e0.firebaseio.com",
+        "projectId": "handoff-372e0",
+        "storageBucket": "handoff-372e0.appspot.com",
+        "messagingSenderId": "83700758944",
+        "appId": "1:83700758944:web:a31144955c51f44dfcccc5"
+      }
+}

@@ -4,6 +4,7 @@
     background-color: black;
     color: white;
     text-transform: uppercase;
+    font-size:1.6em;
 }
 
 .testNav{
@@ -13,6 +14,7 @@
     padding: 0px 10px;
     text-transform: uppercase;
     color: $main-color;
+    font-size:3em;
 }
 
 .nav-options {
@@ -39,7 +41,8 @@
     width:100%;
 
 .btn{
-
+    width: 25%;
+    height: 10%;
 }
 
 .shop-side{

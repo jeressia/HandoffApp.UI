@@ -17,7 +17,7 @@ export class Home extends Component {
                 </div>
                 <div className="home-container">
                     <div className="shop-side">
-                        <button className="btn btn-light shopBtn">Shop Now</button>
+                        <Link to="/MyHome" className="btn btn-light shopBtn">Shop Now</Link>
                     </div>
                     <div className="sell-side">
                         <button className="btn btn-dark sellBtn">Sell Now</button>
