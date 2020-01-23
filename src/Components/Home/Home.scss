@@ -1,42 +1,68 @@
 @import '../../styles/variables';
 
+*{
+    padding: 0px;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 0 !important;
+}
+
 .testBar{
+    display: flex;
+    justify-content: flex-end;
     background-color: black;
     color: white;
     text-transform: uppercase;
+    padding: 10px;
 }
+
+.barNav >*{
+   margin: 0px 10px
+}
+
 
 .testNav{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 2em;
     padding: 0px 10px;
     text-transform: uppercase;
-    color: $main-color;
+    color: white;
 }
 
-.nav-options {
+.navPosition{
+    width:85%;
     display: flex;
+    justify-content: space-between;
+}
+
+.nav-filters {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: .4em;
     letter-spacing: 1px;
-
 }
 
-.nav-options a{
+.nav-filters a{
     text-decoration: none;
-    color: $main-color;
+    color: black;
+    margin: 0px 30px;
 }
 
-.nav-options a:hover{
+.nav-filters a:hover{
     text-decoration: none;
     color: gray;
 }
 
-.home-container{
+.main-container{
     display: flex;
     justify-content: center;
     width:100%;
+    background-color: rgb(228, 228, 228);
+    height: 100vh;
 }
 
 .btn{

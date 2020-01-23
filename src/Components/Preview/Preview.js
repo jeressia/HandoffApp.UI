@@ -7,12 +7,12 @@ export class Home extends Component {
   render() {
     return (
             <div>
-                <div className="testBar">Voted #1 Sports Equipment Trading Site of 2020</div>
+                <div className="testBarPreview">Voted #1 Sports Equipment Trading Site of 2020</div>
                 <div className="testNav">
                     <span className="page-title">The Handoff</span>
                     <span className="nav-options">
                         <Link to="/MyHome">Login |</Link>
-                        <a href=""> &nbsp;Sign-up</a>
+                        <a href="/MyHome"> &nbsp;Sign-up</a>
                     </span>
                 </div>
                 <div className="home-container">
