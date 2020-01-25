@@ -9,8 +9,8 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import Home from '../Components/Home/Home';
-import Preview from '../Components/Preview/Preview';
+import Home from '../components/Home/Home';
+import Preview from '../components/Preview/Preview';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -84,7 +84,7 @@ class App extends React.Component {
           {/* <MyNavbar authed={authed} /> */}
             <Switch>
               <PublicRoute path='/Home' component={Preview} authed={this.state.authed}/>
-              <PrivateRoute path='/MyHome' component={Home} authed={this.state.authed}/>
+              <PublicRoute path='/MyHome' component={Home} authed={this.state.authed}/>
               {/* <PrivateRoute path='/MyProfile' component={MyProfile} authed={this.state.authed}/>
               // eslint-disable-next-line max-len
               <PublicRoute path='/product/:id' component={SingleProduct} authed={this.state.authed}/>
