@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
-
 import { Jumbotron, Button } from 'reactstrap';
+
+import ProductCard from '../ProductCard/ProductCard';
+import productData from '../../helpers/data/productData';
+
 import './Home.scss';
 
 export class Home extends Component {
-  render() {
-    return (
+state = {
+  products: [],
+};
+
+componentDidMount = () => {
+  productData.getAllProducts()
+    .then((resp) => {
+      const results = [...resp];
+      this.setState({ products: results });
+    }).catch((error) => {
+      console.error('broken', error);
+    });
+}
+
+render() {
+  const makeProductCards = this.state.products.map((product) => <ProductCard
+    key={product.productId}
+    product={product}
+    />);
+
+  return (
       <div>
         <div className="testBar">
           <div className="barNav">
@@ -40,10 +62,11 @@ export class Home extends Component {
             </p>
           </Jumbotron>
           <div className="main-container">
-        </div>
+            {makeProductCards}
+          </div>
       </div>
-    );
-  }
+  );
+}
 }
 
 export default Home;

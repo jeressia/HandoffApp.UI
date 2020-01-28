@@ -9,8 +9,8 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import Home from '../components/Home/Home';
-import Preview from '../components/Preview/Preview';
+import Home from '../Components/Home/Home';
+import Preview from '../Components/Preview/Preview';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
