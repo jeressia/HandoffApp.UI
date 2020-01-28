@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
-
 import { Jumbotron, Button } from 'reactstrap';
+import productData from '../../helpers/data/productData';
+
 import './Home.scss';
 
 export class Home extends Component {
-  render() {
-    return (
+state = {
+  products: [],
+};
+
+componentDidMount = () => {
+  productData.getAllProducts()
+    .then((resp) => {
+      const results = [...resp];
+      this.setState({ products: results });
+    }).catch((error) => {
+      console.error('broken', error);
+    });
+}
+
+render() {
+  return (
       <div>
         <div className="testBar">
           <div className="barNav">
@@ -42,8 +57,8 @@ export class Home extends Component {
           <div className="main-container">
         </div>
       </div>
-    );
-  }
+  );
+}
 }
 
 export default Home;
