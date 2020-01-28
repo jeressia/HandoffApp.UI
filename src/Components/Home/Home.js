@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
+
+import ProductCard from '../ProductCard/ProductCard';
 import productData from '../../helpers/data/productData';
 
 import './Home.scss';
@@ -20,6 +22,11 @@ componentDidMount = () => {
 }
 
 render() {
+  const makeProductCards = this.state.products.map((product) => <ProductCard
+    key={product.productId}
+    product={product}
+    />);
+
   return (
       <div>
         <div className="testBar">
@@ -55,7 +62,8 @@ render() {
             </p>
           </Jumbotron>
           <div className="main-container">
-        </div>
+            {makeProductCards}
+          </div>
       </div>
   );
 }
